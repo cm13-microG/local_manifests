@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remove unneeded stuff -->
+  <remove-project name="LineageOS/android_packages_apps_CMUpdater" />
+
+  <!-- Webview/Chromium/V8 - update from N -->
+  <remove-project name="LineageOS/android_external_chromium-webview" />
+  <project path="external/chromium-webview" 
+           name="LineageOS/android_external_chromium-webview" 
+           clone-depth="1" revision="cm-14.1" />
+  <remove-project name="platform/external/chromium-libpac" />
+  <project path="external/chromium-libpac" 
+           name="platform/external/chromium-libpac" 
+           groups="pdk-fs" remote="aosp" 
+           revision="refs/tags/android-7.1.2_r8"/>
+  <remove-project name="platform/external/v8" />
+  <project path="external/v8" name="platform/external/v8" 
+           groups="pdk" remote="aosp" 
+           revision="refs/tags/android-7.1.2_r8" /> 
+
+  <!-- LOS cross-compiler 4.9 -->
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" 
+           name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" 
+           groups="pdk,darwin,arm" clone-depth="1" remote="github" revision="cm-14.1"/>
+
+  <!-- Gello from cm-14.1 -->
+  <remove-project name="LineageOS/android_external_gello_build" />
+  <remove-project name="LineageOS/android_packages_apps_Gello" />
+  <project path="external/gello-build" name="LineageOS/android_external_gello_build" 
+           remote="github" revision="cm-14.1" />
+  <project path="packages/apps/Gello" name="LineageOS/android_packages_apps_Gello"
+           remote="github" revision="cm-14.1" />
+</manifest> 
+

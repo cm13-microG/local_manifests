@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Kernel from cm-14.1 -->
+  <remove-project name="LineageOS/android_kernel_motorola_msm8916" />
+  <project name="LineageOS/android_kernel_motorola_msm8916" 
+           path="kernel/motorola/msm8916" 
+           remote="github" revision="cm-14.1" />
+
+  <!-- Motorola Blobs -->
+  <project name="TheMuppets/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
+</manifest>

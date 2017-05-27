@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- GTS2 Kernel from cm-14.1 -->
+  <remove-project name="LineageOS/android_kernel_samsung_gts2" />
+  <project name="LineageOS/android_kernel_samsung_gts2" path="kernel/samsung/gts2" 
+           remote="github" revision="cm-14.1"/>  
+
+  <!-- Samsung Vendor Blobs -->
+  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+</manifest>
