@@ -24,12 +24,5 @@
            name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" 
            groups="pdk,darwin,arm" clone-depth="1" remote="github" revision="cm-14.1"/>
 
-  <!-- Gello from cm-14.1 -->
-  <remove-project name="LineageOS/android_external_gello_build" />
-  <remove-project name="LineageOS/android_packages_apps_Gello" />
-  <project path="external/gello-build" name="LineageOS/android_external_gello_build" 
-           remote="github" revision="cm-14.1" />
-  <project path="packages/apps/Gello" name="LineageOS/android_packages_apps_Gello"
-           remote="github" revision="cm-14.1" />
 </manifest> 
 
