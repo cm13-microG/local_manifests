@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- Kernel from cm-14.1 -->
+  <!-- 'roomservices.xml' is automatically (re-)built, so the local manifests
+       are built assuming that a 'roomservices.xml' exists. 
+       Since local manifests are processed in alphabetical order, manifests
+       replacing stuff in 'roomservices.xml' must be named to come afterwards. -->  
+
+  <!-- MSM8916 Kernel from cm-14.1 branch (incl. security fixes) -->
   <remove-project name="LineageOS/android_kernel_motorola_msm8916" />
   <project name="LineageOS/android_kernel_motorola_msm8916" 
            path="kernel/motorola/msm8916" 
            remote="github" revision="cm-14.1" />
+
+  <!-- Own Motorola MSM8916 common device configuration -->
+  <remove-project name="LineageOS/android_device_motorola_msm8916-common" />
+  <project name="MSe1969/android_device_motorola_msm8916-common" 
+           path="device/motorola/msm8916-common" remote="github" />
 
   <!-- Motorola Blobs -->
   <project name="TheMuppets/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
