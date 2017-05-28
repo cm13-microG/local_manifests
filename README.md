@@ -19,3 +19,10 @@ git checkout cm-13.0
 cd ../..
 
 repo sync
+
+## Prepare build / apply patches
+cd into directory z_patches and execute the script ./patches_apply.sh
+
+Create a build script in the root dir of your build tree, take the
+sample scripts in directory z_patches as reference and adapt them according
+to your needs.
