@@ -9,6 +9,16 @@
   <!-- Directory containing necessary patches -->
   <project name="MSe1969/z_patches" path="z_patches" remote="github" revision="cm-13.0" /> 
 
+  <!-- Jelly Browser from LOS 14.1 - prebuilt -->
+  <project name="MSe1969/android_packages_apps_Jelly-prebuilt" 
+           path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
+
+
+  <!-- 'roomservices.xml' is automatically (re-)built, so the local manifests
+       are built assuming that a 'roomservices.xml' exists. 
+       Since local manifests are processed in alphabetical order, manifests
+       replacing stuff in 'roomservices.xml' must be named to come afterwards. -->  
+
   <!-- Webview/Chromium/V8 - update from N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
   <project path="external/chromium-webview" 
@@ -33,10 +43,6 @@
   <!-- Own repository for vendor/cm -->
   <remove-project name="LineageOS/android_vendor_cm" />
   <project name="MSe1969/android_vendor_cm" path="vendor/cm" remote="github" revision="cm-13.0" />
-
-  <!-- Jelly Browser from LOS 14.1 - prebuilt -->
-  <project name="MSe1969/android_packages_apps_Jelly-prebuilt" 
-           path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
 </manifest> 
 
