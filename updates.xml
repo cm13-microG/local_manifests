@@ -6,6 +6,9 @@
   <remove-project name="LineageOS/android_packages_apps_Gello" />
   <remove-project name="LineageOS/android_external_gello_build" />
 
+  <!-- Directory containing necessary patches -->
+  <project name="MSe1969/z_patches" path="z_patches" remote="github" revision="cm-13.0" /> 
+
   <!-- Webview/Chromium/V8 - update from N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
   <project path="external/chromium-webview" 
