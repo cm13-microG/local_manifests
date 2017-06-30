@@ -44,5 +44,15 @@
   <remove-project name="LineageOS/android_vendor_cm" />
   <project name="MSe1969/android_vendor_cm" path="vendor/cm" remote="github" revision="cm-13.0" />
 
+  <!-- Take WeatherProvider Samples from CM-14.1 -->
+  <remove-project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
+  <remove-project name="LineageOS/android_packages_apps_WundergroundWeatherProvider" />
+  <project path="vendor/cmsdk/samples/weatherproviderservice/OpenWeatherMapProvider" 
+           name="LineageOS/android_packages_apps_OpenWeatherMapProvider" 
+           remote="github" revision="cm-14.1" />
+  <project path="vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider" 
+           name="LineageOS/android_packages_apps_WundergroundWeatherProvider" 
+           remote="github" revision="cm-14.1" />
+
 </manifest> 
 
