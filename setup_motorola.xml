@@ -17,5 +17,5 @@
            path="device/motorola/msm8916-common" remote="github" />
 
   <!-- Motorola Blobs -->
-  <project name="TheMuppets/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
+  <project name="MSe1969/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
 </manifest>
