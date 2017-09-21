@@ -29,7 +29,7 @@
            name="platform/external/chromium-libpac" 
            groups="pdk-fs" remote="aosp" 
            revision="refs/tags/android-7.1.2_r29"/>
-  <remove-project name="LineageOS/android_external_v8" />
+  <remove-project name="platform/external/v8" />
   <project path="external/v8" name="platform/external/v8" 
            groups="pdk" remote="aosp" 
            revision="refs/tags/android-7.1.2_r29" /> 
