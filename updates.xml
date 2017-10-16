@@ -28,11 +28,11 @@
   <project path="external/chromium-libpac" 
            name="platform/external/chromium-libpac" 
            groups="pdk-fs" remote="aosp" 
-           revision="refs/tags/android-7.1.2_r29"/>
+           revision="refs/tags/android-7.1.2_r33"/>
   <remove-project name="platform/external/v8" />
   <project path="external/v8" name="platform/external/v8" 
            groups="pdk" remote="aosp" 
-           revision="refs/tags/android-7.1.2_r29" /> 
+           revision="refs/tags/android-7.1.2_r33" /> 
 
   <!-- LOS cross-compiler 4.9 -->
   <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
