@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- 'roomservices.xml' is automatically (re-)built, so the local manifests
+       are built assuming that a 'roomservices.xml' exists. 
+       Since local manifests are processed in alphabetical order, manifests
+       replacing stuff in 'roomservices.xml' must be named to come afterwards. -->  
+
   <!-- Remove unneeded stuff -->
   <remove-project name="LineageOS/android_packages_apps_CMUpdater" />
   <remove-project name="LineageOS/android_packages_apps_Browser" />
@@ -10,20 +15,14 @@
   <project name="MSe1969/z_patches" path="z_patches" remote="github" revision="cm-13.0" /> 
 
   <!-- Jelly Browser from LOS 14.1 - prebuilt -->
-  <project name="MSe1969/android_packages_apps_Jelly-prebuilt" 
+  <project name="MSe1969/android_packages_apps_Jelly-prebuilt" clone-depth="1"
            path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
-
-  <!-- 'roomservices.xml' is automatically (re-)built, so the local manifests
-       are built assuming that a 'roomservices.xml' exists. 
-       Since local manifests are processed in alphabetical order, manifests
-       replacing stuff in 'roomservices.xml' must be named to come afterwards. -->  
-
-  <!-- Webview/Chromium/V8 - update from N -->
+  <!-- Webview from cm12-amami / Chromium/V8 - update from AOSP N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
-  <project path="external/chromium-webview" 
-           name="LineageOS/android_external_chromium-webview" 
-           clone-depth="1" revision="cm-14.1" />
+  <project path="external/chromium-webview-arm" 
+           name="cm12-amami/android_external_chromium-webview-arm" 
+           clone-depth="1" revision="master" />
   <remove-project name="platform/external/chromium-libpac" />
   <project path="external/chromium-libpac" 
            name="platform/external/chromium-libpac" 
@@ -34,11 +33,22 @@
            groups="pdk" remote="aosp" 
            revision="refs/tags/android-7.1.2_r33" /> 
 
-  <!-- LOS cross-compiler 4.9 -->
+  <!-- Cross-compilers: Remove Apple/Mac compile hosts -->
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
   <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" 
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
+  <!-- LineageOS GCC 4.9 Cross-Compiler -->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" 
            name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" 
-           groups="pdk,darwin,arm" clone-depth="1" remote="github" revision="cm-14.1"/>
+           groups="pdk,linux,arm" clone-depth="1" revision="cm-14.1" />
+  <!-- Linaro Cross-compiler -->
+  <project path="prebuilts/gcc/linux-x86/arm/linaro-arm-eabi-6.4" 
+           name="MSe1969/prebuilt_linaro_gcc_arm-eabi" 
+           clone-depth="1" revision="6.4.1" />
 
   <!-- Own repository for vendor/cm -->
   <remove-project name="LineageOS/android_vendor_cm" />
