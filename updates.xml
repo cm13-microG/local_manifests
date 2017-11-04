@@ -64,5 +64,9 @@
            name="LineageOS/android_packages_apps_WundergroundWeatherProvider" 
            remote="github" revision="cm-14.1" />
 
+  <!-- CarrierConfig (for VoLTE testing) -->
+  <remove-project name="LineageOS/android_packages_apps_CarrierConfig" />
+  <project name="MSe1969/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" remote="github" revision="cm-13.0" />
+
 </manifest> 
 
