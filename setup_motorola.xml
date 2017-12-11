@@ -9,7 +9,7 @@
   <remove-project name="LineageOS/android_kernel_motorola_msm8916" />
   <project name="MSe1969/android_kernel_motorola_msm8916" 
            path="kernel/motorola/msm8916" 
-           remote="github" revision="v108-tmp" />
+           remote="github" revision="squid_oreo" />
 
   <!-- Own Motorola MSM8916 common device configuration -->
   <remove-project name="LineageOS/android_device_motorola_msm8916-common" />
