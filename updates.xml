@@ -18,11 +18,11 @@
   <project name="MSe1969/android_packages_apps_Jelly-prebuilt" clone-depth="1"
            path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
-  <!-- Webview from cm12-amami / Chromium/V8 - update from AOSP N -->
+  <!-- Webview from LOS 14.1 / Chromium/V8 - update from AOSP N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
-  <project path="external/chromium-webview-arm" 
-           name="cm12-amami/android_external_chromium-webview-arm" 
-           clone-depth="1" revision="master" />
+  <project path="external/chromium-webview" 
+           name="LineageOS/android_external_chromium-webview" 
+           clone-depth="1" revision="cm-14.1" />
   <remove-project name="platform/external/chromium-libpac" />
   <project path="external/chromium-libpac" 
            name="platform/external/chromium-libpac" 
