@@ -11,6 +11,13 @@
   <remove-project name="LineageOS/android_packages_apps_Gello" />
   <remove-project name="LineageOS/android_external_gello_build" />
 
+  <!-- microG Build, prebuilt apks (will not be used in cm-13.0 branch) -->
+  <project path="prebuilts/prebuiltapks" name="lineageos4microg/android_prebuilts_prebuiltapks" 
+           remote="github" revision="master" />
+  <project name="MSe1969/privacy-friendly-netmonitor-prebuilt" 
+           path="external/secuso/privacy-friendly-netmonitor-prebuilt" 
+           revision="master" clone-depth="1" />
+
   <!-- Directory containing necessary patches -->
   <project name="MSe1969/z_patches" path="z_patches" remote="github" revision="cm-13.0" /> 
 
@@ -50,9 +57,13 @@
            name="MSe1969/prebuilt_linaro_gcc_arm-eabi" 
            clone-depth="1" revision="6.4.1" />
 
-  <!-- Own repository for vendor/cm -->
+  <!-- Own repository for vendor/cm and Sepolicy (Sepolicy cm-13.0 equals LineageOS) -->
   <remove-project name="LineageOS/android_vendor_cm" />
   <project name="MSe1969/android_vendor_cm" path="vendor/cm" remote="github" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_external_sepolicy" />
+  <project name="MSe1969/android_external_sepolicy" path="external/sepolicy" remote="github" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_device_qcom_sepolicy" />
+  <project name="MSe1969/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="github" revision="cm-13.0" />
 
   <!-- Take WeatherProvider Samples from CM-14.1 -->
   <remove-project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
