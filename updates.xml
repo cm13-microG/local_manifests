@@ -10,24 +10,32 @@
   <remove-project name="LineageOS/android_packages_apps_Browser" />
   <remove-project name="LineageOS/android_packages_apps_Gello" />
   <remove-project name="LineageOS/android_external_gello_build" />
+  <remove-project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
+  <remove-project name="LineageOS/android_packages_apps_WundergroundWeatherProvider" />
 
   <!-- microG Build, prebuilt apks (will not be used in cm-13.0 branch) -->
-  <project path="prebuilts/prebuiltapks" name="lineageos4microg/android_prebuilts_prebuiltapks" 
+  <project path="prebuilts/prebuiltapks" 
+           name="lineageos4microg/android_prebuilts_prebuiltapks" 
            remote="github" revision="master" />
-  <project name="MSe1969/privacy-friendly-netmonitor-prebuilt" 
+  <project name="cm13-microG/privacy-friendly-netmonitor-prebuilt" 
            path="external/secuso/privacy-friendly-netmonitor-prebuilt" 
            revision="master" clone-depth="1" />
 
   <!-- Directory containing necessary patches -->
-  <project name="MSe1969/z_patches" path="z_patches" remote="github" revision="cm-13.0" /> 
+  <project name="cm13-microG/z_patches" path="z_patches" revision="cm-13.0" /> 
 
   <!-- Jelly Browser from LOS 14.1 - prebuilt -->
-  <project name="MSe1969/android_packages_apps_Jelly-prebuilt" clone-depth="1"
+  <project name="cm13-microG/android_packages_apps_Jelly-prebuilt" clone-depth="1"
            path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
   <!-- Trebuchet Launcher fork with cm-14.1 backports -->
   <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
-  <project name="MSe1969/android_packages_apps_Trebuchet" remote="github" revision="cm-13.0" />
+  <project name="cm13-microG/android_packages_apps_Trebuchet" 
+           path="packages/apps/Trebuchet" revision="cm-13.0" />
+
+  <!-- Own vendor/cm -->
+  <remove-project name="LineageOS/android_vendor_cm" />
+  <project name="cm13-microG/android_vendor_cm" path="vendor/cm" revision="cm-13.0" />
 
   <!-- Webview from LOS 14.1 / Chromium/V8 - update from AOSP N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
@@ -61,23 +69,20 @@
            name="MSe1969/prebuilt_linaro_gcc_arm-eabi" 
            clone-depth="1" revision="6.4.1" />
 
-  <!-- Own repository for vendor/cm and Sepolicy (Sepolicy cm-13.0 equals LineageOS) -->
-  <remove-project name="LineageOS/android_vendor_cm" />
-  <project name="MSe1969/android_vendor_cm" path="vendor/cm" remote="github" revision="cm-13.0" />
-  <remove-project name="LineageOS/android_external_sepolicy" />
-  <project name="MSe1969/android_external_sepolicy" path="external/sepolicy" remote="github" revision="cm-13.0" />
+  <!-- Own repositories for microG/sec.enhanced (cm-13.0 equals LineageOS) -->
   <remove-project name="LineageOS/android_device_qcom_sepolicy" />
-  <project name="MSe1969/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="github" revision="cm-13.0" />
-
-  <!-- Take WeatherProvider Samples from CM-14.1 -->
-  <remove-project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
-  <remove-project name="LineageOS/android_packages_apps_WundergroundWeatherProvider" />
-  <project path="vendor/cmsdk/samples/weatherproviderservice/OpenWeatherMapProvider" 
-           name="LineageOS/android_packages_apps_OpenWeatherMapProvider" 
-           remote="github" revision="cm-14.1" />
-  <project path="vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider" 
-           name="LineageOS/android_packages_apps_WundergroundWeatherProvider" 
-           remote="github" revision="cm-14.1" />
+  <project name="cm13-microG/android_device_qcom_sepolicy" path="device/qcom/sepolicy" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_external_sepolicy" />
+  <project name="cm13-microG/android_external_sepolicy" path="external/sepolicy" revision="cm-13.0" />
+  <remove-project name="platform/external/sqlite" />
+  <project name="cm13-microG/android_external_sqlite" path="external/sqlite" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project name="cm13-microG/android_frameworks_base" path="frameworks/base" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_frameworks_native" />
+  <project name="cm13-microG/android_frameworks_native" path="frameworks/native" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <project name="cm13-microG/android_packages_apps_Settings" 
+           path="packages/apps/Settings" revision="cm-13.0" />
 
 </manifest> 
 

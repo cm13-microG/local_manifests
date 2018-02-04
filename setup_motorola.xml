@@ -13,9 +13,9 @@
 
   <!-- Own Motorola MSM8916 common device configuration -->
   <remove-project name="LineageOS/android_device_motorola_msm8916-common" />
-  <project name="MSe1969/android_device_motorola_msm8916-common" 
+  <project name="cm13-microG/android_device_motorola_msm8916-common" 
            path="device/motorola/msm8916-common" remote="github" />
 
   <!-- Motorola Blobs -->
-  <project name="MSe1969/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
+  <project name="cm13-microG/proprietary_vendor_motorola" path="vendor/motorola" remote="github" />
 </manifest>
