@@ -25,6 +25,11 @@
   <project name="MSe1969/android_packages_apps_Jelly-prebuilt" clone-depth="1"
            path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
+  <!-- Trebuchet Launcher fork with cm-14.1 backports -->
+  <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+  <project name="MSe1969/android_packages_apps_Trebuchet" 
+           path="packages/apps/Trebuchet" remote="github" revision="cm-13.0" />
+
   <!-- Webview from LOS 14.1 / Chromium/V8 - update from AOSP N -->
   <remove-project name="LineageOS/android_external_chromium-webview" />
   <project path="external/chromium-webview" 
