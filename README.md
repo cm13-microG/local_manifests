@@ -22,3 +22,13 @@ cd into directory **z_patches** and execute the script `./patches_apply.sh`
 Create a build script in the root dir of your build tree, take the
 sample scripts in directory z_patches as reference and adapt them according
 to your needs.
+
+## Differences to 'vanilla' LineageOS 13.0
+1. Removed below packages from the build:
+   - **CMUpdater** (obsolete, as cm-13.0 does not receive any updates any longer)
+   - **AOSP Browser** and **Gello** (obsolete, outdated and insecure)
+2. Included LineageOS **Jelly** browser (prebuilt)
+3. Include most current **CA-Certificates** from AOSP master branch
+4. Osprey-device only: Use **Squid Kernel** (oreo branch)
+5. Take AOSP System Webview and other Chromium components from 'cm-14.1' branch
+6. Synchonize further repositories due to 'cm-13.0-microG' branch (no impact on 'cm-13.0' branch)
