@@ -25,7 +25,7 @@
   <project name="cm13-microG/z_patches" path="z_patches" revision="cm-13.0" /> 
 
   <!-- Jelly Browser from LOS 14.1 - prebuilt -->
-  <project name="cm13-microG/android_packages_apps_Jelly-prebuilt" clone-depth="1"
+  <project name="cm13-microG/android_packages_apps_Jelly-prebuilt"
            path="packages/apps/Jelly-prebuilt" remote="github" revision="cm-13.0" />
 
   <!-- Trebuchet Launcher fork with cm-14.1 backports -->
