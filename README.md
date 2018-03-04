@@ -32,3 +32,4 @@ to your needs.
 4. Osprey-device only: Use **Squid Kernel** (oreo branch)
 5. Take AOSP System Webview and other Chromium components from 'cm-14.1' branch
 6. Synchonize further repositories due to 'cm-13.0-microG' branch (no impact on 'cm-13.0' branch)
+7. **z_patches** directory contains 'microG patch' (applied, if patch script is executed)
