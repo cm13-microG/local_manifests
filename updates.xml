@@ -88,6 +88,9 @@
   <remove-project name="LineageOS/android_packages_apps_Settings" />
   <project name="cm13-microG/android_packages_apps_Settings" 
            path="packages/apps/Settings" revision="cm-13.0" />
+  <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
+  <project name="cm13-microG/android_packages_apps_SetupWizard" 
+           path="packages/apps/SetupWizard" revision="cm-13.0" />
 
 </manifest> 
 
