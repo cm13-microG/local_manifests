@@ -23,6 +23,7 @@
 
   <!-- Directory containing necessary patches -->
   <project name="cm13-microG/z_patches" path="z_patches" revision="cm-13.0" /> 
+  <project name="cm13-microG/root-scripts" path="z_patches/root-scripts" revision="cm-13.0" />
 
   <!-- Jelly Browser from LOS 14.1 - prebuilt -->
   <project name="cm13-microG/android_packages_apps_Jelly-prebuilt"
