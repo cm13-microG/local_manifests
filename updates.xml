@@ -61,10 +61,6 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" 
            name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" 
            groups="pdk,linux,arm" clone-depth="1" revision="cm-14.1" />
-  <!-- Linaro Cross-compiler -->
-  <project path="prebuilts/gcc/linux-x86/arm/linaro-arm-eabi-6.4" 
-           name="MSe1969/prebuilt_linaro_gcc_arm-eabi" 
-           clone-depth="1" revision="6.4.1" />
 
   <!-- Most Current Certificates -->
   <project name="platform/system/ca-certificates" path="system/ca-certificates" remote="aosp" revision="master" />
