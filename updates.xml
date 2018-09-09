@@ -38,11 +38,7 @@
   <remove-project name="LineageOS/android_vendor_cm" />
   <project name="cm13-microG/android_vendor_cm" path="vendor/cm" revision="cm-13.0" />
 
-  <!-- Webview from LineageOS 15.1 / Chromium/V8 - update from AOSP N -->
-  <remove-project name="LineageOS/android_external_chromium-webview" />
-  <project path="external/chromium-webview" 
-           name="LineageOS/android_external_chromium-webview" 
-           clone-depth="1" revision="lineage-15.1" />
+  <!-- Chromium/V8 - update from AOSP N -->
   <remove-project name="platform/external/chromium-libpac" />
   <project path="external/chromium-libpac" 
            name="platform/external/chromium-libpac" 
