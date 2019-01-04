@@ -7,14 +7,15 @@ Osprey and SM-T815 device, follow the steps below:
 Create the directory, which should hold your build tree, 'cd' into it
 and run the following commands:
 ```Shell session
-repo init -u https://github.com/LineageOS/android.git -b cm-13.0
+repo init -u https://github.com/LineageOS/android.git -b cm-13.0 --groups=all,-notdefault,-darwin,-x86,-mips
 cd .repo
 git clone https://github.com/cm13-microG/local_manifests
 cd local_manifests
 git checkout cm-13.0-microG
 cd ../..
-repo sync
+repo sync --no-tags
 ```
+Note: If you build on a MAC, omit the `-darwin` in above `repo init` statement.
 
 ## Prepare build / apply patches
 cd into directory **z_patches** and execute the script `./patches_apply.sh`
@@ -30,9 +31,9 @@ to your needs.
 2. Included LineageOS **Jelly** browser (prebuilt)
 3. Include most current **CA-Certificates** from AOSP master branch
 4. Osprey-device only: Use **Squid Kernel** (oreo branch)
-5. Take AOSP System Webview and other Chromium components from 'cm-14.1' branch
-6. 'microG build' having the following features:
+5. 'microG build' having the following features:
    - Prebuilt 'microG' apps included
    - Enhanced SELinux policies (restrict /proc timers and /proc/net)
    - Additional AppOps (Sensor, Storage) in Privacy Guard
    - SQLite Secure delete feature
+
