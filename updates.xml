@@ -38,24 +38,6 @@
   <remove-project name="LineageOS/android_vendor_cm" />
   <project name="cm13-microG/android_vendor_cm" path="vendor/cm" revision="cm-13.0" />
 
-  <!-- Chromium/V8 - update from AOSP N -->
-  <remove-project name="platform/external/chromium-libpac" />
-  <project path="external/chromium-libpac" 
-           name="platform/external/chromium-libpac" 
-           groups="pdk-fs" remote="aosp" 
-           revision="refs/tags/android-7.1.2_r36"/>
-  <remove-project name="platform/external/v8" />
-  <project path="external/v8" name="platform/external/v8" 
-           groups="pdk" remote="aosp" 
-           revision="refs/tags/android-7.1.2_r36" /> 
-
-  <!-- Cross-compilers: Remove Apple/Mac compile hosts -->
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" />
-  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
   <!-- LineageOS GCC 4.9 Cross-Compiler -->
   <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" 
