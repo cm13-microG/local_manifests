@@ -21,17 +21,6 @@
   <project name="cm13-microG/android_device_motorola_msm8916-common" 
            path="device/motorola/msm8916-common" remote="github" revision="cm-13.0-volte" />
 
-  <!-- Take Motorola MSM8226 Kernel from cm-14.1 branch -->
-  <remove-project name="LineageOS/android_kernel_motorola_msm8226" />
-  <project name="LineageOS/android_kernel_motorola_msm8226" 
-           path="kernel/motorola/msm8226" 
-           remote="github" revision="cm-14.1" />
-
-  <!-- Own Motorola MSM8226 common device configuration -->
-  <remove-project name="LineageOS/android_device_motorola_msm8226-common" />
-  <project name="cm13-microG/android_device_motorola_msm8226-common" 
-           path="device/motorola/msm8226-common" remote="github" />
-
   <!-- Motorola Blobs -->
   <project name="cm13-microG/proprietary_vendor_motorola" path="vendor/motorola" 
            remote="github" revision="cm-13.0-volte" />
